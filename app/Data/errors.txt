@@ -1,0 +1,16 @@
+Error with connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 	27-11-2020 20:54:43
+Error with connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 	27-11-2020 20:59:53SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:34:49
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:36:09
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:40:04
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:45:01
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:51:48
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 15:48:54
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 15:53:28
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:01:01
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:11:55
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:16:01
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`skoda_rent`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`idRole`) REFERENCES `role` (`idRole`))	30-11-2020 19:53:56
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:22:44
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:24:07
+SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:35:32
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'darko@yahoo.com' for key 'email'	30-11-2020 21:52:54

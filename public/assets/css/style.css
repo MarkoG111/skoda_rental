@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Skoda_Pro";
+  src: url("../fonts/Skoda_Pro.ttf");
+}
+
+:root {
+  --primary-color: #4ba82e;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Skoda_Pro";
+  font-weight: bold;
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: none!important;
+}
+
+.row {
+  margin-right: 0!important;
+  margin-left: 0!important;
+}
+
+.prim-color {
+  color: var(--primary-color);
+}
+
+.my-add {
+  margin: 30px 0 60px 0;
+}
+
+/* Navigation Styling - Start */
+
+.navbar-nav {
+  flex-direction: row!important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px!important;
+}
+
+.nav-link {
+  display: block;
+  padding: 30px!important;
+  color: #000;
+}
+
+.nav-link:hover, .bg-dark a:hover, .bg-black a:hover {
+  color: var(--primary-color)!important;
+}
+
+.login-cred a {
+  font-size: 18px;
+}
+
+/* Navigation Styling - End */
+
+/* Slider Styling - Start */
+
+.carousel-item {
+  height: 70vh;
+  min-height: 400px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url('../img/slider/Superb.jpg');
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url('../img/slider/Skala.jpg');
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url('../img/slider/Kamiq.jpg');
+}
+
+.carousel-control-prev, .carousel-control-next {
+  visibility: hidden;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  visibility: hidden;
+}
+
+.carousel-control-next:after {
+  visibility: visible;
+  content: '>';
+  font-size: 105px;
+  color: var(--primary-color);
+}
+
+.carousel-control-prev:after {
+  visibility: visible;
+  content: '<';
+  font-size: 105px;
+  color: var(--primary-color);
+}
+
+/* Slider Styling - End */
+
+/* Home Section Styling - Start */
+
+.action-panel div {
+  display: flex;
+  justify-content: center;
+}
+
+.bg-lighter-gray {
+  background-color: #dddada;
+  width: 57.6%;
+  margin: 60px auto;
+}
+
+.action-title {
+  background-color: var(--primary-color);
+  color: #fff;
+  margin-right: 40px;
+  width: 20%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.action-title:hover {
+  color: #fff;
+  background-color: #62a84c;
+  text-decoration: none;
+}
+
+.action-title-icon {
+  padding-top: 20px;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.action-title-text {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+}
+
+.action-title:last-child {
+  margin-right: 0;
+}
+
+/* Home Section Styling - End */
+
+/* Footer Styling - Start */
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-black a, .bg-dark a {
+  color: #fff;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.icon-link {
+  margin-right: 20px;
+}
+
+.icon-link:hover {
+  color: var(--primary-color);
+}
+
+.author-link {
+  text-decoration: underline;
+}
+
+.author-link:hover {
+  text-decoration: underline!important;
+  color: var(--primary-color);
+}
+
+.footer-nav {
+  margin-top: -10px;
+}
+
+footer {
+  padding: 40px 0;
+}
+
+/* Footer Styling - End */
+
+/* Models Styling Start */
+
+.car {
+  height: 225px;
+  margin-bottom: 15px;
+}
+
+.car-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.modelName {
+  color: #000;
+  text-decoration: none;
+}
+
+.black-link {
+  padding: 7px 15px !important;
+  margin-top: 10px !important;
+  cursor: pointer;
+  width: auto !important;
+  margin-left: 0 !important;
+  font-size: 18px !important;
+  color: #fff;
+  display: inline-block;
+  background: #000;
+  border-color: #000;
+}
+
+.black-link:hover {
+  color: var(--primary-color);
+}
+
+/* Start Scaling */
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*  End Scaling */
+
+/* Models Styling End */
+
+/* Start of registration form styling */
+
+#registrationModal .form {
+  padding: 0px 40px;
+}
+
+#registrationModal .form-group {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#registrationModal .form-group label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#registrationModal .form-group input {
+  border: 2px solid #dbdbdb;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+#registrationModal .form-group input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+#registrationModal .form-group.success input {
+  border-color: #2ecc71;
+}
+
+#registrationModal .form-group.error input {
+  border-color: #e74c3c;
+}
+
+#registrationModal .form-group i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+#registrationModal .form-group.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+#registrationModal .form-group.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+#registrationModal .form-group small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+#registrationModal .form-group.error small {
+  visibility: visible;
+}
+
+#registrationModal .form button {
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* End of registration form styling */
+
+/* Start of login form styling */
+
+.login-footer {
+  display: block!important;
+}
+
+.modal-footer-errors {
+  float: left;
+  color: #ff0000;
+}
+
+.modal-cancel {
+  float: right;
+}
+
+.gray-border {
+  border: 1px solid #dbdbdb;
+}
+
+.not-correct-border {
+  border: 1px solid #ff0000;
+}
+
+/* End of login form styling */
+
+.tot-price {
+  font-size: 24px;
+}

@@ -1,59 +1,80 @@
 <?php
-namespace app\Controllers;
 
-use app\Config\Database;
-use app\Models\Person;
+namespace app\controllers;
 
-class LoginController extends Controller
+use app\config\Database;
+use app\models\accounts\Login;
+use PDOException;
+
+class LoginController extends BaseController
 {
   public function login($request)
   {
-    if (isset($request['btnLogin'])) {
-      $email = $request['tbEmail'];
-      $password = $request['tbPassword'];
+    $data = null;
+    $code = 400;
 
-      $regexPassword = "/^(?=.*\d).{6,31}$/";
+    if (isset($request["email"])) {
+      $email = $request["email"];
+      $password = $request["password"];
+
+      $regex_password = "/^(?=.*\d).{6,31}$/";
 
       $errors = [];
 
-      if (!preg_match($regexPassword, $password)) {
-        $errors[] = "Password is not in good format.";
-      }
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Email is not in good format.";
+        $errors[] = "Email is not good.";
       }
 
-      if (count($errors)) {
-        $_SESSION["login-errors"] = $errors;
-        $this->redirect("index.php?page=home");
-        exit;
-      } else {
-        $loginModel = new Person(Database::getInstance());
+      if (!preg_match($regex_password, $password)) {
+        $errors[] = "Password is not good.";
+      }
 
+      if (count($errors) > 0) {
+        $code = 400;
+        $data = $errors;
+      } else {
         try {
           $password = md5($password);
-          $person = $loginModel->getPerson($email, $password);
-          if ($person == null) {
-            $_SESSION["login-errors"] = ["Email or Password is not correct."];
-            $this->redirect("index.php?page=home");
-            exit;
+
+          $database = Database::getInstance();
+
+          $login_model = new Login($database);
+
+          $data = $login_model->loginUser($email, $password);
+
+          if ($data) {
+            $_SESSION["user"] = $data;
+
+            writeUserInFile($data->user_id);
+
+            if ($data->role_id == "1") {
+              $this->json("redirect_admin", 200);
+              die();
+            } else {
+              $this->json("redirect_user", 200);
+              die();
+            }
           } else {
-            $_SESSION['person'] = $person;
-            $this->redirect("index.php?page=home");
+            $this->json("Wrong email or password.", 401);
+            die();
           }
-        } catch (\PDOException $ex) {
-          logError($ex->getMessage());
+        } catch (PDOException $ex) {
+          logError("Login user error " . $ex->getMessage());
+          $this->json("Error logging in.", 500);
+          die();
         }
       }
-    } else {
-      $_SESSION["login-errors"] = ["No action provided."];
-      $this->redirect("index.php?page=home");
-    };
+    }
+
+    $this->json($data, $code);
   }
 
   public function logout()
   {
-    unset($_SESSION['person']);
+    removeUserFromFile($_SESSION["user"]->user_id);
+
+    unset($_SESSION["user"]);
+    
     $this->redirect("index.php?page=home");
   }
 }

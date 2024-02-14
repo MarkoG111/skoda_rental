@@ -1,16 +1,105 @@
-Error with connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 	27-11-2020 20:54:43
-Error with connection: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: No such host is known. 	27-11-2020 20:59:53SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:34:49
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:36:09
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:40:04
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:45:01
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 00:51:48
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 15:48:54
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 15:53:28
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:01:01
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:11:55
-SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens	29-11-2020 16:16:01
-SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`skoda_rent`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`idRole`) REFERENCES `role` (`idRole`))	30-11-2020 19:53:56
-SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:22:44
-SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:24:07
-SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1	30-11-2020 21:35:32
-SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'darko@yahoo.com' for key 'email'	30-11-2020 21:52:54
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 17:22:11
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 17:22:54
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 17:59:15
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:01:11
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:03:01
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:06:46
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:06:57
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:08:20
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:09:11
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:10:20
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:10:37
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:11:53
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	28-12-2023 18:11:53
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:42:00
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:42:32
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:43:52
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:43:52
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:46:03
+Error with database connection: SQLSTATE[HY000] [2019] Unknown character set	29-12-2023 10:46:03
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?, ?, ?)' at line 1	04-01-2024 19:55:31
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+insertCarFeatures method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.car_feautres' doesn't exist	04-01-2024 19:58:11
+getCars method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.pricies' doesn't exist	05-01-2024 15:54:50
+getCars method error SQLSTATE[42S02]: Base table or view not found: 1146 Table 'skoda_rent.pricies' doesn't exist	05-01-2024 15:57:07
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.category_name' in 'where clause'	08-01-2024 19:38:27
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.category_name' in 'where clause'	08-01-2024 19:38:43
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.category_name' in 'where clause'	08-01-2024 19:38:55
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'car_name' in 'where clause'	08-01-2024 19:40:06
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.category_name' in 'where clause'	08-01-2024 19:41:40
+filterAndSortCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.category_name' in 'where clause'	08-01-2024 19:42:25
+getCars method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.transmission_type' in 'field list'	15-01-2024 13:25:06
+insertBookingRequest method error SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'	18-01-2024 16:09:08
+getAllBookingsUser method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM (SELECT DISTINCT car_id, price_per_day FROM prices ORDER BY date DESC) A...' at line 1	23-01-2024 17:40:31
+getAllBookingsUser method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM (SELECT DISTINCT car_id, price_per_day FROM prices ORDER BY date DESC) A...' at line 1	23-01-2024 17:41:47
+getAllBookingsUser method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM (SELECT DISTINCT car_id, price_per_day FROM prices ORDER BY date DESC) A...' at line 1	23-01-2024 17:41:55
+getAllBookingsUser method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM (SELECT DISTINCT car_id, price_per_day FROM prices ORDER BY date DESC) A...' at line 1	23-01-2024 17:42:42
+updateImage method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/js.png' at line 1	27-01-2024 15:05:49
+updateImage method error SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/vue.png' at line 1	27-01-2024 15:09:42
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null	27-01-2024 23:13:22
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null	27-01-2024 23:13:22
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:16:07
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:17:22
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:22:23
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:25:20
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:26:12
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:27:53
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'review_text' cannot be null	27-01-2024 23:29:22
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	28-01-2024 19:06:05
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	28-01-2024 19:09:02
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:08:03
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:08:27
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:08:55
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:09:06
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:10:19
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:10:33
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:12:54
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:13:46
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:14:45
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:15:20
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:15:35
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:15:51
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:16:02
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:16:23
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:16:31
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:17:09
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:17:24
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:17:25
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:20:06
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:20:39
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:21:04
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:21:19
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:21:39
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:21:48
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:21:56
+getTotalRecords method error SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.price_id' in 'where clause'	30-01-2024 14:22:04
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:33:24
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:34:46
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:35:17
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:36:36
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:37:48
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:38:11
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:38:49
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:39:03
+insertUserReview method error SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'car_id' cannot be null	31-01-2024 23:39:29

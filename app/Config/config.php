@@ -2,10 +2,13 @@
 
 define("ABSOLUTE_PATH", $_SERVER["DOCUMENT_ROOT"] . "/Skoda_Rent/");
 
-define("ENV_FILE", ABSOLUTE_PATH . "app/Config/.env");
+define("ENV_FILE", ABSOLUTE_PATH . "app/config/.env");
 
-define("ERROR_FILE", ABSOLUTE_PATH . "app/Data/errors.txt");
-define("ACCESS_FILE", ABSOLUTE_PATH . "app/Data/access.txt");
+define("ERROR_FILE", ABSOLUTE_PATH . "app/data/errors.txt");
+define("ACCESS_FILE", ABSOLUTE_PATH . "app/data/access.txt");
+define("LOGGED_USERS", ABSOLUTE_PATH . "app/data/loggedUsers.txt");
+
+define("USER_IMAGES", "public/assets/img/uploaded");
 
 define("SERVER", env("SERVER"));
 define("DATABASE", env("DBNAME"));
@@ -24,7 +27,8 @@ function env($param)
       $string = trim($config[1]);
     }
   }
-  return $string;
 
   fclose($open);
+
+  return $string;
 }

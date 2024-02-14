@@ -2,9 +2,6 @@
   .bg-lighter-gray {
     width: 70%;
   }
-  .modelName {
-    font-size: 26px;
-  }
 }
 
 @media only screen and (max-width: 1400px) {
@@ -12,38 +9,51 @@
     width: 15%;
     font-size: 13px;
   }
+
   .action-title-icon {
     font-size: 10px;
   }
+
   .login-cred a {
-    padding-left: 0!important;
+    padding-left: 0 !important;
     font-size: 17px;
     display: inline-block;
   }
+
   .pr {
-    padding-right: 50px!important;
+    padding-right: 50px !important;
     margin-bottom: 15px;
   }
+
   .footer-nav {
-    flex-direction: column!important;
+    flex-direction: column !important;
     text-align: left;
   }
+
   .footer-nav .nav-link {
-    font-size: 17px!important;
-    padding: 0!important;
+    font-size: 17px !important;
+    padding: 0 !important;
   }
+
   .navbar-nav {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
+
   .nav-link {
-    padding: 10px 0!important;
+    padding: 10px 0 !important;
   }
+
   .black-link {
-    font-size: 15px!important;
-    padding: 6px 10px!important;
+    font-size: 15px !important;
+    padding: 6px 10px !important;
   }
-  .modelName {
-    font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .site-section-cover,
+  .site-section-cover .container > .row {
+    height: calc(70vh - 196px);
+    min-height: 400px;
   }
 }
 
@@ -52,42 +62,62 @@
     font-size: 22px;
     min-height: 100%;
   }
+
   .action-title {
     font-size: 11px;
     padding: 5px;
   }
+
   .bg-lighter-gray {
     width: 68%;
   }
+
   .logo {
-    margin-left: 15px!important;
+    margin-left: 15px !important;
   }
+
   .login-cred a {
     font-size: 16px;
     margin-bottom: 20px;
   }
+
   .login-cred {
     text-align: left !important;
     margin-top: 15px;
   }
-  .carousel-control-next:after, .carousel-control-prev:after {
-    font-size: 70px!important;
+
+  .carousel-control-next:after,
+  .carousel-control-prev:after {
+    font-size: 70px !important;
   }
+
   .icon-link {
     font-size: 12px;
   }
+
   .navbar-nav {
-    flex-direction: row!important;
+    flex-direction: row !important;
   }
+
   .nav-link {
-    padding: 30px!important;
+    padding: 30px !important;
   }
+
   .black-link {
-    font-size: 13px!important;
-    padding: 6px 9px!important;
+    font-size: 13px !important;
+    padding: 6px 9px !important;
   }
-  .modelName {
-    font-size: 18px;
+
+  .car-preview {
+    display: block;
+  }
+
+  .car-preview img {
+    margin-top: 30px;
+  }
+
+  .site-section {
+    padding: 5em 0;
   }
 }
 
@@ -95,41 +125,43 @@
   .bg-lighter-gray {
     width: 40%;
   }
+
   .action-panel h3 {
     font-size: 20px;
     padding: 0 5px;
     text-align: center;
   }
+
   .action-title {
     margin-right: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     display: inline-table;
   }
+
   .action-panel div {
-    flex-direction: column!important;
+    flex-direction: column !important;
     align-items: center;
   }
+
   .action-title-text {
     margin-top: 15px;
   }
+
   .navbar-nav {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
+
   .nav-link {
-    padding: 10px 0px 5px 20px!important;
+    padding: 10px 0px 5px 20px !important;
   }
+
   .black-link {
-    font-size: 11px!important;
-    padding: 5px 8px!important;
+    font-size: 11px !important;
+    padding: 5px 8px !important;
   }
-  .modelName {
-    font-size: 13px;
-  }
+
   .car {
     height: inherit;
-  }
-  .modelDetails {
-    text-align: center;
   }
 }

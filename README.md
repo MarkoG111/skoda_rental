@@ -3,6 +3,8 @@
 **Škoda Rental** je full-stack PHP aplikacija za online iznajmljivanje automobila.  
 Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacije**, aplikacija omogućava korisnicima da pregledaju automobile, rezervišu ih i ostavljaju recenzije, dok administratori upravljaju celokupnim sadržajem i rezervacijama putem odvojenog panela.
 
+🔗 Live demo: https://gacho-dev.rs/skoda-rental
+
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)	
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)	
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)	

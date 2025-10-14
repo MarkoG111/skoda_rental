@@ -5,6 +5,10 @@ Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacij
 
 🔗 Live demo: https://gacho-dev.rs/skoda-rental
 
+📄 Documentation and Database:
+📘 Full Project Documentation (PDF) - https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf
+🗄️ Database SQL File - https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
+
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)	
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)	
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)	

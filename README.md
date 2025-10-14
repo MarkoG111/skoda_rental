@@ -1,22 +1,19 @@
-# 🚗 Škoda Rent
+# 🚗 Škoda Rental
 
-**Škoda Rent** je full-stack PHP aplikacija za online iznajmljivanje automobila.  
+**Škoda Rental** je full-stack PHP aplikacija za online iznajmljivanje automobila.  
 Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacije**, aplikacija omogućava korisnicima da pregledaju automobile, rezervišu ih i ostavljaju recenzije, dok administratori upravljaju celokupnim sadržajem i rezervacijama putem odvojenog panela.
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)	
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)	
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)	
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple.svg?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
+[![jQuery](https://img.shields.io/badge/jQuery-AJAX-blue.svg?style=for-the-badge&logo=jquery)](https://jquery.com/)
+[![MVC](https://img.shields.io/badge/Architecture-MVC-success.svg?style=for-the-badge&logo=codeigniter)]()
 
 🎯 Projektovan kao *real-world edukativni projekat*, s fokusom na čistu arhitekturu, višeslojni dizajn i sigurne SQL operacije.
 
 ---
-## 📚 Sadržaj
-- [Funkcionalnosti](#-funkcionalnosti)
-- [Tehnologije](#-tehnologije)
-- [Arhitektura sistema](#-arhitektura-sistema)
-- [Struktura projekta](#-struktura-projekta)
-- [Glavni moduli](#-glavni-moduli)
-- [Bezbednost i validacija](#-bezbednost-i-validacija)
-- [Instalacija i konfiguracija](#-instalacija-i-konfiguracija)
-- [Preview sekcija](#-preview-sekcija)
-- [Autor i licenca](#-autor-i-licenca)
----
+
 
 ## ✨ Funkcionalnosti
 
@@ -47,29 +44,38 @@ Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacij
 | **Backend** | PHP 8+ (OOP, MVC, PDO), JSON |
 | **Baza podataka** | MySQL (phpMyAdmin) |
 | **Dodatno** | PHPMailer, File Logging, Image Resize (GD Library), Excel export |
-| **Razvojno okruženje** | Visual Studio Code, XAMPP / Laragon |
+| **Razvojno okruženje** | Visual Studio Code, XAMPP |
 
 ---
 ## 🧠 Arhitektura sistema
 
 Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući logiku aplikacije na tri sloja:
 ┌───────────────────────────────────────────────────────────────┐
-│ View (UI) │
-│ HTML + Bootstrap + jQuery + AJAX │
+
+│ View (UI) │ <br/>
+│ HTML + Bootstrap + jQuery + AJAX │ <br/>
 │ Prikazuje podatke korisniku i prosleđuje akcije Controlleru │
 └───────────────────────────────────────────────────────────────┘
+<br/>
 │
+<br/>
 ▼
+<br/>
 ┌───────────────────────────────────────────────────────────────┐
-│ Controller (Logika) │
-│ Obrada korisničkih zahteva, validacija, poziv Modela │
+ 
+│ Controller (Logika) │ <br/>
+│ Obrada korisničkih zahteva, validacija, poziv Modela │ <br/>
 │ i prosleđivanje rezultata View sloju │
 └───────────────────────────────────────────────────────────────┘
+<br/>
 │
+<br/>
 ▼
+<br/>
 ┌───────────────────────────────────────────────────────────────┐
-│ Model (Podaci) │
-│ Komunikacija sa bazom putem PDO konekcije │
+
+│ Model (Podaci) │ <br/>
+│ Komunikacija sa bazom putem PDO konekcije │ <br/>
 │ CRUD operacije, SQL upiti, transformacija podataka │
 └───────────────────────────────────────────────────────────────┘
 
@@ -81,27 +87,27 @@ Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući lo
 ---
 
 
-## 🧩 Glavni moduli
+## 🧩 Glavni modeli
 
-### 🚘 Car Module
+### 🚘 Car Model
 - Unos, ažuriranje, brisanje automobila  
 - Dinamičko filtriranje po kategoriji, gorivu, transmisiji i ceni  
 - Paginacija i pretraga sa AJAX-om  
 - Prikaz detalja o vozilu (slike, oprema, recenzije)
 
-### 📦 Booking Module
+### 📦 Booking Model
 - Slanje zahteva za rezervaciju  
 - Validacija datuma (budući termini)  
 - Provera dostupnosti istog automobila  
 - Status rezervacija: *pending*, *confirmed*, *canceled*  
 - Otkazivanje rezervacije (user/admin)
 
-### 💬 Review Module
+### 💬 Review Model
 - Korisnici mogu ostaviti recenziju samo za iznajmljena vozila  
 - Administrator odobrava ili odbija recenzije  
 - CRUD funkcionalnost sa dinamičkim osvježavanjem (AJAX)
 
-### 🖼️ Image Module
+### 🖼️ Image Model
 - Upload više slika za svako vozilo  
 - Automatsko generisanje *thumbnail* verzije  
 - Brisanje i dodavanje novih slika tokom izmene vozila  
@@ -121,13 +127,20 @@ Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući lo
 1. Kloniraj repozitorijum  
    ```bash
    git clone https://github.com/<username>/skoda-rent.git
-Kreiraj MySQL bazu i importuj database.sql
-U app/config/config.php postavi svoje DB kredencijale:
+2. Kreiraj MySQL bazu i importuj database.sql
+3. U app/config/config.php postavi svoje DB kredencijale:
+``php
 define("SERVER", "localhost");
 define("DATABASE", "skoda_rent");
 define("USERNAME", "root");
 define("PASSWORD", "");
-Pokreni projekat kroz XAMPP http://localhost/skoda-rent
-Uloguj se u admin panel koristeći test nalog:
+``
+
+4. Pokreni projekat kroz XAMPP (http://localhost/skoda_rental)
+5. Uloguj se u admin panel koristeći test nalog:
 email: testadmin@gmail.com
 password: Gacanovic121
+---
+
+## 🖼️ Preview sekcija
+

@@ -1,7 +1,7 @@
 # 🚗 Škoda Rental
 
-**Škoda Rental** je full-stack PHP aplikacija za online iznajmljivanje automobila.  
-Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacije**, aplikacija omogućava korisnicima da pregledaju automobile, rezervišu ih i ostavljaju recenzije, dok administratori upravljaju celokupnim sadržajem i rezervacijama putem odvojenog panela.
+Škoda Rental is a full-stack PHP application for online car rentals.
+Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the application allows users to browse cars, make reservations, and leave reviews, while administrators manage all content and bookings through a separate panel.
 
 🔗 Live demo: https://gacho-dev.rs/skoda-rental
 
@@ -16,51 +16,51 @@ Izgrađena korišćenjem **OOP PHP-a**, **MVC arhitekture** i **AJAX komunikacij
 [![jQuery](https://img.shields.io/badge/jQuery-AJAX-blue.svg?style=for-the-badge&logo=jquery)](https://jquery.com/)
 [![MVC](https://img.shields.io/badge/Architecture-MVC-success.svg?style=for-the-badge&logo=codeigniter)]()
 
-🎯 Projektovan kao *real-world edukativni projekat*, s fokusom na čistu arhitekturu, višeslojni dizajn i sigurne SQL operacije.
+🎯 Designed as a real-world educational project, focusing on clean architecture, multi-layered design, and secure SQL operations.
 
 ---
 
 
-## ✨ Funkcionalnosti
+## ✨ Features
 
-### 👥 Korisnici
-- Registracija i prijava sa server-side i client-side validacijom  
-- Pregled automobila sa filtriranjem po ceni, kategoriji, gorivu i menjaču  
-- Sortiranje i pretraga po ključnim rečima  
-- Rezervacija automobila sa proverom dostupnosti  
-- Pregled i otkazivanje sopstvenih rezervacija  
-- Pregled istorije recenzija i dodavanje novih (samo za iznajmljena vozila)  
+### 👥 Users
+- Registration and login with server-side and client-side validation 
+- Browsing cars with filtering by price, category, fuel type, and transmission  
+- Sorting and searching by keywords  
+- Car reservation with availability checking  
+- Viewing and canceling own reservations  
+- Viewing review history and adding new reviews (only for rented vehicles)  
 
 ### 🧑‍💼 Administrator
-- CRUD operacije nad automobilima, slikama i karakteristikama  
-- Upravljanje korisničkim rezervacijama (potvrda / otkazivanje)  
-- Kontrola recenzija (odobravanje, brisanje, skrivanje)  
-- Pregled statistike poseta i aktivnosti  
-- Izvoz podataka o vozilima u **Excel (.xlsx)**  
-- AJAX upravljanje bez reload-a stranice  
+- CRUD operations for cars, images, and specifications  
+- Managing user reservations (confirmation/cancellation)  
+- Review management (approving, deleting, hiding)  
+- Viewing visit and activity statistics  
+- Exporting vehicle data to Excel (.xlsx) 
+- AJAX-based management without page reloads
 
 ---
 
 
-## 🧱 Tehnologije
+## 🧱 Technologies
 
-| Sloj | Tehnologije |
+| Layer | Technologies |
 |------|--------------|
 | **Frontend** | HTML5, CSS3, Bootstrap, jQuery, AJAX |
 | **Backend** | PHP 8+ (OOP, MVC, PDO), JSON |
-| **Baza podataka** | MySQL (phpMyAdmin) |
-| **Dodatno** | PHPMailer, File Logging, Image Resize (GD Library), Excel export |
-| **Razvojno okruženje** | Visual Studio Code, XAMPP |
+| **Database** | MySQL (phpMyAdmin) |
+| **Additional** | PHPMailer, File Logging, Image Resize (GD Library), Excel export |
+| **Development Environment** | Visual Studio Code, XAMPP |
 
 ---
-## 🧠 Arhitektura sistema
+## 🧠 System Architecture
 
-Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući logiku aplikacije na tri sloja:
+The application uses the **MVC (Model–View–Controller)** pattern, separating application logic into three layers:
 ┌───────────────────────────────────────────────────────────────┐
 
 │ View (UI) │ <br/>
 │ HTML + Bootstrap + jQuery + AJAX │ <br/>
-│ Prikazuje podatke korisniku i prosleđuje akcije Controlleru │
+│ Displays data to the user and passes actions to the Controller │
 └───────────────────────────────────────────────────────────────┘
 <br/>
 │
@@ -69,9 +69,9 @@ Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući lo
 <br/>
 ┌───────────────────────────────────────────────────────────────┐
  
-│ Controller (Logika) │ <br/>
-│ Obrada korisničkih zahteva, validacija, poziv Modela │ <br/>
-│ i prosleđivanje rezultata View sloju │
+│ Controller (Logic) │ <br/>
+│ Processes user requests, validation, calls the Model, │ <br/>
+│ and passes results to the View layer │
 └───────────────────────────────────────────────────────────────┘
 <br/>
 │
@@ -80,61 +80,62 @@ Aplikacija koristi **MVC (Model–View–Controller)** obrazac, razdvajajući lo
 <br/>
 ┌───────────────────────────────────────────────────────────────┐
 
-│ Model (Podaci) │ <br/>
-│ Komunikacija sa bazom putem PDO konekcije │ <br/>
-│ CRUD operacije, SQL upiti, transformacija podataka │
+│ Model (Data) │ <br/>
+│ Communicates with the database via PDO connection │ <br/>
+│ CRUD operations, SQL queries, data transformation │
 └───────────────────────────────────────────────────────────────┘
 
-➡ **Front Controller** (`index.php`) prepoznaje zahtev preko `$_GET['page']` i prosleđuje ga odgovarajućem kontroleru.  
-➡ **Autoloading** je implementiran u `setup.php`, bez ručnih `require` poziva.  
-➡ **Logovanje grešaka i pristupa** se vrši kroz `logError()` i `logAccess()` funkcije.  
-➡ **Validacija i obrada slika** se obavljaju centralizovano (resize + thumbnail kreiranje).
+➡ **Front Controller** (`index.php`) recognizes requests via $_GET['page'] and forwards them to the appropriate controller.
+➡ **Autoloading** is implemented in setup.php, eliminating manual require calls.
+➡ **Logovanje grešaka i pristupa** is handled through logError() and logAccess() functions. 
+➡ **Validacija i obrada slika** are centralized (resize + thumbnail creation).
 
 ---
 
 
-## 🧩 Glavni modeli
+## 🧩 Main Models
 
 ### 🚘 Car Model
-- Unos, ažuriranje, brisanje automobila  
-- Dinamičko filtriranje po kategoriji, gorivu, transmisiji i ceni  
-- Paginacija i pretraga sa AJAX-om  
-- Prikaz detalja o vozilu (slike, oprema, recenzije)
+- Adding, updating, deleting cars
+- Dynamic filtering by category, fuel, transmission, and price
+- Pagination and search with AJAX
+- Displaying vehicle details (images, equipment, reviews)
 
 ### 📦 Booking Model
-- Slanje zahteva za rezervaciju  
-- Validacija datuma (budući termini)  
-- Provera dostupnosti istog automobila  
-- Status rezervacija: *pending*, *confirmed*, *canceled*  
-- Otkazivanje rezervacije (user/admin)
+- Sending reservation requests
+- Date validation (future dates only)
+- Checking availability for the same car
+- Reservation statuses: pending, confirmed, canceled
+- Reservation cancellation (user/admin)
 
 ### 💬 Review Model
-- Korisnici mogu ostaviti recenziju samo za iznajmljena vozila  
-- Administrator odobrava ili odbija recenzije  
-- CRUD funkcionalnost sa dinamičkim osvježavanjem (AJAX)
+- Users can leave reviews only for rented vehicles
+- Administrators approve or reject reviews
+- CRUD functionality with dynamic refresh (AJAX)
 
 ### 🖼️ Image Model
-- Upload više slika za svako vozilo  
-- Automatsko generisanje *thumbnail* verzije  
-- Brisanje i dodavanje novih slika tokom izmene vozila  
+- Uploading multiple images for each vehicle
+- Automatic generation of thumbnail versions
+- Deleting and adding new images during vehicle edits
+
+--- 
+
+## 🛡️ Security and Validation
+- Prepared statements (PDO) — protection against SQL injection
+- Server-side validation in all forms
+- Client-side validation using regex expressions
+- Error log files: errors.txt, access.txt
+- Access control (admin/user separated by session)
+- Session management via session_start() and writeUserInFile() functions
 
 ---
 
-## 🛡️ Bezbednost i validacija
-- **Prepared statements (PDO)** — zaštita od SQL injectiona  
-- **Server-side validacija** u svim formama  
-- **Client-side validacija** pomoću regex izraza  
-- **Error log fajlovi**: `errors.txt`, `access.txt`  
-- **Kontrola pristupa** (admin/user razdvojeno po sesiji)  
-- **Session management** kroz `session_start()` i `writeUserInFile()` funkcije  
----
-
-## 🧰 Instalacija i konfiguracija
-1. Kloniraj repozitorijum  
+## 🧰 Installation and Configuration
+1. Clone the repository:  
    ```bash
    git clone https://github.com/<username>/skoda-rent.git
-2. Kreiraj MySQL bazu i importuj database.sql
-3. U app/config/config.php postavi svoje DB kredencijale:
+2. Create a MySQL database and import database.sql
+3. In app/config/config.php set your DB credentials:
 ``php
 define("SERVER", "localhost");
 define("DATABASE", "skoda_rent");
@@ -142,11 +143,11 @@ define("USERNAME", "root");
 define("PASSWORD", "");
 ``
 
-4. Pokreni projekat kroz XAMPP (http://localhost/skoda_rental)
-5. Uloguj se u admin panel koristeći test nalog:
+4. Run the project through XAMPP (http://localhost/skoda_rental)
+5. Log in to the admin panel using the test account:
 email: testadmin@gmail.com
 password: Gacanovic121
 ---
 
-## 🖼️ Preview sekcija
+## 🖼️ Preview Section
 

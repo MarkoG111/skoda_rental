@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2024 at 02:37 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Oct 15, 2025 at 11:03 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -471,7 +471,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `city`, `address`, `phone`, `licence_number`, `years_of_experience`, `role_id`, `created_at`) VALUES
 (2, 'Marko', 'Gačanović', 'markogacanovic111@gmail.com', 'd55b6a09d86d3079bb956c9a3f95490f', 'Belgrade', 'Bore Prodanovića 19', '069/330-7997', 'F255-931-50-331-0', 2, 1, '2024-01-01 13:01:06'),
 (3, 'Jovan', 'Jovanovic', 'jovan@gmail.com', '0571b4dbea34085bf577afbcc5db43aa', 'Belgrade', 'Takovska 11', '063/821-3133', 'F255-931-50-331-2', 2, 2, '2024-01-18 21:36:48'),
-(4, 'Sofija', 'Jovanovic', 'sofija@gmail.com', 'd5b23b8f546d97f17a074a66dbd085f3', 'Belgrade', 'Bore Prodanovića 19', '069/330-7997', 'F255-931-50-331-0', 3, 2, '2024-01-24 16:02:13');
+(4, 'Sofija', 'Jovanovic', 'sofija@gmail.com', 'd5b23b8f546d97f17a074a66dbd085f3', 'Belgrade', 'Bore Prodanovića 19', '069/330-7997', 'F255-931-50-331-0', 3, 2, '2024-01-24 16:02:13'),
+(5, 'Marko', 'Gačanović', 'testadmin@gmail.com', 'd55b6a09d86d3079bb956c9a3f95490f', 'Belgrade', 'Bore Prodanovića 19', '069/330-7997', 'F255-555-50-331-0', 3, 1, '2025-10-15 10:54:23');
 
 --
 -- Indexes for dumped tables
@@ -647,7 +648,7 @@ ALTER TABLE `transmissions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables

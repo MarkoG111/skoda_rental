@@ -31,7 +31,7 @@
             <li class="nav-item"><a href="index.php?page=<?= $menu_item->href ?>" class="nav-link"><?= $menu_item->text ?></a></li>
           <?php endforeach; ?>
 
-          <?php if (isset($_SESSION['user']) && $_SESSION['user']->idRole == '2') : ?>
+          <?php if (isset($_SESSION['user']) && $_SESSION['user']->role_id == '2') : ?>
             <?php foreach ($data['menu_authorized'] as $menu_item) : ?>
               <li class="nav-item">
                 <a href="index.php?page=<?= $menu_item->href ?>" class="nav-link">
@@ -43,7 +43,7 @@
             <?php endforeach; ?>
           <?php endif; ?>
 
-          <?php if (isset($_SESSION['user']) && $_SESSION['user']->idRole == '1') : ?>
+          <?php if (isset($_SESSION['user']) && $_SESSION['user']->role_id == '1') : ?>
             <?php foreach ($data['menu_admin'] as $menu_item) : ?>
               <li class="nav-item"><a href="index.php?page=<?= $menu_item->href ?>" class="nav-link"><?= $menu_item->text ?></a></li>
             <?php endforeach; ?>

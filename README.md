@@ -9,8 +9,8 @@ Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the a
 📘 Full Project Documentation (PDF) - https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf <br/>
 🗄️ Database SQL File - https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
 
-👨‍💻 Admin login:
-Email: testadmin@gmail.com
+👨‍💻 Admin login: <br/>
+Email: testadmin@gmail.com <br/>
 Password: Gacanovic121
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)	

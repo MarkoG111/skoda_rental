@@ -1,6 +1,6 @@
 <?php
 
-define("ABSOLUTE_PATH", $_SERVER["DOCUMENT_ROOT"] . "/Skoda_Rent/");
+define("ABSOLUTE_PATH", $_SERVER["DOCUMENT_ROOT"] . "/skoda_rental/");
 
 define("ENV_FILE", ABSOLUTE_PATH . "app/config/.env");
 

@@ -5,9 +5,8 @@ Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the a
 
 🔗 Live demo: https://gacho-dev.rs/skoda-rental
 
-📄 Documentation and Database: <br/>
-📘 Full Project Documentation (PDF) - https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf <br/>
-🗄️ Database SQL File - https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
+- 📘 Project Documentation (PDF): https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf
+- 🗄️ Database SQL File - https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
 
 👨‍💻 Admin login: <br/>
 Email: testadmin@gmail.com <br/>
@@ -89,10 +88,10 @@ The application uses the **MVC (Model–View–Controller)** pattern, separating
 │ CRUD operations, SQL queries, data transformation │
 └───────────────────────────────────────────────────────────────┘
 
-➡ **Front Controller** (`index.php`) recognizes requests via $_GET['page'] and forwards them to the appropriate controller.
-➡ **Autoloading** is implemented in setup.php, eliminating manual require calls.
-➡ **Logovanje grešaka i pristupa** is handled through logError() and logAccess() functions. 
-➡ **Validacija i obrada slika** are centralized (resize + thumbnail creation).
+- **Front Controller** (`index.php`) recognizes requests via $_GET['page'] and forwards them to the appropriate controller.
+- **Autoloading** is implemented in setup.php, eliminating manual require calls.
+- **Logging erros and access** is handled through logError() and logAccess() functions. 
+- **Validation and image processing** are centralized (resize + thumbnail creation).
 
 ---
 
@@ -125,7 +124,7 @@ The application uses the **MVC (Model–View–Controller)** pattern, separating
 --- 
 
 ## 🛡️ Security and Validation
-- Prepared statements (PDO) — protection against SQL injection
+- Prepared statements (PDO) - protection against SQL injection
 - Server-side validation in all forms
 - Client-side validation using regex expressions
 - Error log files: errors.txt, access.txt
@@ -140,18 +139,15 @@ The application uses the **MVC (Model–View–Controller)** pattern, separating
    git clone https://github.com/skoda_rental.git
 2. Create a MySQL database and import database.sql
 3. In app/config/config.php set your DB credentials:
-``php
+```php
 define("SERVER", "localhost");
 define("DATABASE", "skoda_rent");
 define("USERNAME", "root");
 define("PASSWORD", "");
-``
+```
 
 4. Run the project through XAMPP (http://localhost/skoda_rental)
 5. Log in to the admin panel using the test account:
 email: testadmin@gmail.com
 password: Gacanovic121
 ---
-
-## 🖼️ Preview Section
-

@@ -137,7 +137,7 @@ The application uses the **MVC (Model–View–Controller)** pattern, separating
 ## 🧰 Installation and Configuration
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/<username>/skoda-rent.git
+   git clone https://github.com/skoda_rental.git
 2. Create a MySQL database and import database.sql
 3. In app/config/config.php set your DB credentials:
 ``php

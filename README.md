@@ -3,7 +3,7 @@
 Škoda Rental is a full-stack PHP application for online car rentals.
 Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the application allows users to browse cars, make reservations, and leave reviews, while administrators manage all content and bookings through a separate panel.
 
-🔗 Live demo: https://gacho-dev.rs/skoda-rental
+🔗 Live demo: https://skoda-rental.infinityfree.me/
 
 - 📘 Project Documentation (PDF): https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf
 - 🗄️ Database SQL File: https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql

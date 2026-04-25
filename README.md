@@ -3,10 +3,10 @@
 Škoda Rental is a full-stack PHP application for online car rentals.
 Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the application allows users to browse cars, make reservations, and leave reviews, while administrators manage all content and bookings through a separate panel.
 
-🔗 Live demo: https://gacho-dev.rs/skoda-rental
+🔗 Live demo: https://skoda-rental.infinityfree.me/
 
 - 📘 Project Documentation (PDF): https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf
-- 🗄️ Database SQL File - https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
+- 🗄️ Database SQL File: https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
 
 👨‍💻 Admin login: <br/>
 Email: testadmin@gmail.com <br/>
@@ -138,7 +138,7 @@ The application uses the **MVC (Model–View–Controller)** pattern, separating
    ```bash
    git clone https://github.com/skoda_rental.git
 2. Create a MySQL database and import database.sql
-3. In app/config/config.php set your DB credentials:
+3. In app/Config/config.php set your DB credentials:
 ```php
 define("SERVER", "localhost");
 define("DATABASE", "skoda_rent");
@@ -147,7 +147,4 @@ define("PASSWORD", "");
 ```
 
 4. Run the project through XAMPP (http://localhost/skoda_rental)
-5. Log in to the admin panel using the test account:
-email: testadmin@gmail.com
-password: Gacanovic121
 ---

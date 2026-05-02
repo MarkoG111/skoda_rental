@@ -1,150 +1,242 @@
-# 🚗 Škoda Rental
+# 🚗 Škoda Rent-a-Car Management System
 
-Škoda Rental is a full-stack PHP application for online car rentals.
-Built using **OOP PHP**, **MVC architecture**, and **AJAX communication**, the application allows users to browse cars, make reservations, and leave reviews, while administrators manage all content and bookings through a separate panel.
+A full-stack web application for managing car rentals, built with a custom PHP MVC framework, focusing on clean architecture, modular design, and real-world business logic.
 
-🔗 Live demo: https://skoda-rental.infinityfree.me/
+This system enables users to browse and book vehicles, while administrators manage fleet operations, reservations, and platform content through a dynamic dashboard.
 
-- 📘 Project Documentation (PDF): https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf
-- 🗄️ Database SQL File: https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql
-
-👨‍💻 Admin login: <br/>
-Email: testadmin@gmail.com <br/>
-Password: Gacanovic121
-
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)	
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)	
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)	
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple.svg?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
-[![jQuery](https://img.shields.io/badge/jQuery-AJAX-blue.svg?style=for-the-badge&logo=jquery)](https://jquery.com/)
-[![MVC](https://img.shields.io/badge/Architecture-MVC-success.svg?style=for-the-badge&logo=codeigniter)]()
-
-🎯 Designed as a real-world educational project, focusing on clean architecture, multi-layered design, and secure SQL operations.
+🔗 **Live Demo:** [skoda-rental.infinityfree.me](https://skoda-rental.infinityfree.me/)
+📄 **Documentation (PDF):** [Dokument.pdf](https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf)
+🗄️ **Database Schema:** [skoda_rent.sql](https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql)
 
 ---
 
+## 📑 Table of Contents
 
-## ✨ Features
+- [Demo Credentials](#-demo-credentials)
+- [Key Features](#-key-features)
+- [Architecture](#-architecture)
+- [Request Flow](#-request-flow)
+- [MVC Breakdown](#-mvc-breakdown)
+- [OOP Principles](#-oop-principles)
+- [Design Patterns](#-design-patterns)
+- [Tech Stack](#-tech-stack)
+- [Core Modules](#-core-modules)
+- [Security & Validation](#-security--validation)
+- [Installation](#-installation)
+- [Project Highlights](#-project-highlights)
 
-### 👥 Users
-- Registration and login with server-side and client-side validation 
-- Browsing cars with filtering by price, category, fuel type, and transmission  
-- Sorting and searching by keywords  
-- Car reservation with availability checking  
-- Viewing and canceling own reservations  
-- Viewing review history and adding new reviews (only for rented vehicles)  
+---
+
+## 🔐 Demo Credentials
+
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | testadmin@gmail.com | Gacanovic121 |
+| User | user@gmail.com | user123 |
+
+---
+
+## ✨ Key Features
+
+### 👤 Users
+- Advanced filtering (price, fuel type, transmission, category)
+- Keyword-based search with AJAX updates
+- Booking system with date validation and availability checks
+- Reservation tracking (Pending, Approved, Canceled)
+- Review system restricted to previously rented vehicles
+- Vehicle galleries with auto-generated thumbnails
 
 ### 🧑‍💼 Administrator
-- CRUD operations for cars, images, and specifications  
-- Managing user reservations (confirmation/cancellation)  
-- Review management (approving, deleting, hiding)  
-- Viewing visit and activity statistics  
-- Exporting vehicle data to Excel (.xlsx) 
-- AJAX-based management without page reloads
+- Full CRUD for cars, specifications, and images
+- Reservation approval and conflict handling
+- Review moderation system
+- Activity tracking (visitors and active users)
+- Excel export functionality
+- AJAX-based dashboard without page reloads
 
 ---
 
+## 🧠 Architecture
 
-## 🧱 Technologies
+The application is built using a custom MVC architecture, designed to separate responsibilities, reduce coupling, and make the system easier to extend and maintain.
+
+> Instead of relying on frameworks like Laravel, the architecture is implemented manually to demonstrate understanding of core backend concepts.
+
+---
+
+## 🔁 Request Flow
+
+1. All incoming requests are routed through a **Front Controller** (`index.php`)
+2. Routing is handled via query parameters (`$_GET['page']`)
+3. The appropriate **Controller** is instantiated
+4. The controller processes input and calls the **Model**
+5. The model interacts with the database via **PDO**
+6. The response is returned:
+   - HTML via **View** rendering
+   - JSON for **AJAX** requests
+
+---
+
+## 🧩 MVC Breakdown
+
+### 📦 Model - Data Layer
+
+Responsible for all data-related logic and database communication.
+
+- Uses PDO with prepared statements
+- Handles complex queries (JOINs, filtering, pagination)
+- Encapsulates business rules (e.g., booking availability)
+
+> **Example:** Car model handles filtering, search, and retrieval of related data (images, features, pricing)
+
+### 🎨 View - Presentation Layer
+
+Responsible for rendering UI.
+
+- PHP templates (e.g., `carDetails.php`)
+- Minimal logic inside views
+- Receives structured data from controllers
+- Works with AJAX for partial updates
+
+### 🧠 Controller - Application Logic
+
+Acts as the intermediary between user input and system behavior.
+
+- Handles HTTP requests (GET, POST, AJAX)
+- Validates input
+- Calls appropriate model methods
+- Returns views or JSON responses
+
+---
+
+## 🧬 OOP Principles
+
+### Encapsulation
+Each domain concept is represented as a class (e.g., `Car`, `Booking`, `Review`, `Image`).
+- Internal state is protected via private properties
+- Access is controlled via public methods
+
+### Inheritance
+Controllers extend a shared `BaseController`.
+- Reuses logic for rendering views
+- Standardized response handling
+- Reduces duplication
+
+### Dependency Injection
+Database connection is injected into models.
+- Improves modularity
+- Enables easier testing
+- Reduces tight coupling between components
+
+---
+
+## 🧠 Design Patterns
+
+### Front Controller
+All requests pass through a single entry point (`index.php`), centralizing routing and control flow.
+
+### Singleton (Database)
+Database connection is implemented as a Singleton.
+- Ensures only one connection instance
+- Reduces unnecessary resource usage
+
+### Layered Architecture
+Clear separation between:
+- **Presentation** (View)
+- **Logic** (Controller)
+- **Data** (Model)
+
+### Centralized Logging
+Custom logging system:
+- `logError()` → tracks system errors
+- `logAccess()` → tracks user activity
+
+> Adds observability often missing in smaller projects.
+
+---
+
+## 🧱 Tech Stack
 
 | Layer | Technologies |
-|------|--------------|
-| **Frontend** | HTML5, CSS3, Bootstrap, jQuery, AJAX |
-| **Backend** | PHP 8+ (OOP, MVC, PDO), JSON |
-| **Database** | MySQL (phpMyAdmin) |
-| **Additional** | PHPMailer, File Logging, Image Resize (GD Library), Excel export |
-| **Development Environment** | Visual Studio Code, XAMPP |
-
----
-## 🧠 System Architecture
-
-The application uses the **MVC (Model–View–Controller)** pattern, separating application logic into three layers:
-┌───────────────────────────────────────────────────────────────┐
-
-│ View (UI) │ <br/>
-│ HTML + Bootstrap + jQuery + AJAX │ <br/>
-│ Displays data to the user and passes actions to the Controller │
-└───────────────────────────────────────────────────────────────┘
-<br/>
-│
-<br/>
-▼
-<br/>
-┌───────────────────────────────────────────────────────────────┐
- 
-│ Controller (Logic) │ <br/>
-│ Processes user requests, validation, calls the Model, │ <br/>
-│ and passes results to the View layer │
-└───────────────────────────────────────────────────────────────┘
-<br/>
-│
-<br/>
-▼
-<br/>
-┌───────────────────────────────────────────────────────────────┐
-
-│ Model (Data) │ <br/>
-│ Communicates with the database via PDO connection │ <br/>
-│ CRUD operations, SQL queries, data transformation │
-└───────────────────────────────────────────────────────────────┘
-
-- **Front Controller** (`index.php`) recognizes requests via $_GET['page'] and forwards them to the appropriate controller.
-- **Autoloading** is implemented in setup.php, eliminating manual require calls.
-- **Logging erros and access** is handled through logError() and logAccess() functions. 
-- **Validation and image processing** are centralized (resize + thumbnail creation).
+|-------|-------------|
+| Backend | PHP 8 (OOP, MVC), PDO |
+| Frontend | JavaScript (ES6), jQuery, AJAX, Bootstrap |
+| Database | MySQL |
+| Utilities | GD Library, Excel export, File logging |
 
 ---
 
+## 🧩 Core Modules
 
-## 🧩 Main Models
+### 🚘 Car Module
+- Filtering, search, pagination
+- Dynamic loading via AJAX
+- Detailed car pages
 
-### 🚘 Car Model
-- Adding, updating, deleting cars
-- Dynamic filtering by category, fuel, transmission, and price
-- Pagination and search with AJAX
-- Displaying vehicle details (images, equipment, reviews)
+### 📦 Booking Module
+- Reservation requests
+- Date validation
+- Conflict prevention
+- Status lifecycle management
 
-### 📦 Booking Model
-- Sending reservation requests
-- Date validation (future dates only)
-- Checking availability for the same car
-- Reservation statuses: pending, confirmed, canceled
-- Reservation cancellation (user/admin)
+### 💬 Review Module
+- Review allowed only after rental
+- Admin approval system
+- AJAX updates
 
-### 💬 Review Model
-- Users can leave reviews only for rented vehicles
-- Administrators approve or reject reviews
-- CRUD functionality with dynamic refresh (AJAX)
-
-### 🖼️ Image Model
-- Uploading multiple images for each vehicle
-- Automatic generation of thumbnail versions
-- Deleting and adding new images during vehicle edits
-
---- 
-
-## 🛡️ Security and Validation
-- Prepared statements (PDO) - protection against SQL injection
-- Server-side validation in all forms
-- Client-side validation using regex expressions
-- Error log files: errors.txt, access.txt
-- Access control (admin/user separated by session)
-- Session management via session_start() and writeUserInFile() functions
+### 🖼️ Image Module
+- Multi-image upload
+- Thumbnail generation
+- Image management on edit
 
 ---
 
-## 🧰 Installation and Configuration
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/skoda_rental.git
-2. Create a MySQL database and import database.sql
-3. In app/Config/config.php set your DB credentials:
+## 🛡️ Security & Validation
+
+- PDO prepared statements → SQL injection protection
+- Server-side validation on all forms
+- Client-side validation (regex)
+- Session-based authentication
+- Role separation (admin / user)
+- Logging (errors + access)
+
+> ⚠️ **Note:** Password hashing currently uses MD5 and should be replaced with `password_hash()` for production use.
+
+---
+
+## ⚙️ Installation
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/MarkoG111/skoda_rental.git
+```
+
+**2. Import the database**
+```bash
+# Import skoda_rent.sql into your MySQL server
+```
+
+**3. Configure database connection**
 ```php
-define("SERVER", "localhost");
+define("SERVER",   "localhost");
 define("DATABASE", "skoda_rent");
 define("USERNAME", "root");
 define("PASSWORD", "");
 ```
 
-4. Run the project through XAMPP (http://localhost/skoda_rental)
+**4. Run the application**
+```
+http://localhost/skoda_rental
+```
+
 ---
+
+## 🎯 Project Highlights
+
+- ⚡ Custom-built MVC framework, no external backend frameworks
+- 📅 Real-world booking logic with validation and conflict handling
+- 🔄 AJAX-driven UI for improved UX
+- 🏗️ Clean separation of concerns
+- 📋 Logging and monitoring system
+
+> This project is intended as a portfolio-grade system demonstrating understanding of backend architecture, ability to design scalable systems from scratch, handling of real-world edge cases, and full-stack development skills.

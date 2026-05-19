@@ -4,8 +4,8 @@ A full-stack web application for managing car rentals, built with a custom PHP M
 
 This system enables users to browse and book vehicles, while administrators manage fleet operations, reservations, and platform content through a dynamic dashboard.
 
-🔗 **Live Demo:** [skoda-rental.infinityfree.me](https://skoda-rental.infinityfree.me/)
-📄 **Documentation (PDF):** [Dokument.pdf](https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf)
+🔗 **Live Demo:** [skoda-rental.infinityfree.me](https://skoda-rental.infinityfree.me/) <br/>
+📄 **Documentation (PDF):** [Dokument.pdf](https://github.com/MarkoG111/skoda_rental/blob/master/Dokument.pdf) <br/>
 🗄️ **Database Schema:** [skoda_rent.sql](https://github.com/MarkoG111/skoda_rental/blob/master/skoda_rent.sql)
 
 ---
@@ -21,8 +21,8 @@ This system enables users to browse and book vehicles, while administrators mana
 - [Design Patterns](#-design-patterns)
 - [Tech Stack](#-tech-stack)
 - [Core Modules](#-core-modules)
-- [Security & Validation](#-security--validation)
-- [Installation](#-installation)
+- [Security & Validation](#%EF%B8%8F-security--validation)
+- [Installation](#%EF%B8%8F-installation)
 - [Project Highlights](#-project-highlights)
 
 ---
